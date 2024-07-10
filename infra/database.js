@@ -29,17 +29,19 @@ async function getNewClient() {
   return client;
 }
 
-export default {
+const database = {
   query,
   getNewClient,
 };
 
-function getSSLValues() {
-  if (process.env.POSTGRES_CA) {
-    return {
-      ca: process.env.POSTGRES_CA,
-    };
-  }
+export default database;
 
-  return process.env.NODE_ENV === "production" ? true : false;
-}
+// function getSSLValues() {
+//   if (process.env.POSTGRES_CA) {
+//     return {
+//       ca: process.env.POSTGRES_CA,
+//     };
+//   }
+
+//   return process.env.NODE_ENV === "production" ? true : false;
+// }
