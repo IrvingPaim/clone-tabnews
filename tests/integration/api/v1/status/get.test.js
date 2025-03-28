@@ -2,7 +2,7 @@ import orchestrator from "../orchestrator.js";
 
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
-  //await orchestrator.clearDatabase(); //testando...
+  //await orchestrator.clearDatabase();
 });
 
 describe("GET /api/v1/status", () => {
