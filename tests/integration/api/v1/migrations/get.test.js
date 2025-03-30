@@ -3,7 +3,7 @@ import orchestrator from "../orchestrator";
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
   await orchestrator.clearDatabase();
-});
+}); //criar PR
 
 describe("GET /api/v1/migrations", () => {
   describe("Anonymous user", () => {
