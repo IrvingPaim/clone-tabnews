@@ -114,7 +114,7 @@ describe("GET /api/v1/user", () => {
         renewedSessionObject.updated_at > sessionObject.updated_at,
       ).toEqual(true);
 
-      // Set‑Cookie assertions
+      // Set‑Cookie assertions.
       const parsedSetCookie = setCookieParser(response, {
         map: true,
       });
